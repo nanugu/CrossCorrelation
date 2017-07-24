@@ -75,7 +75,7 @@ func write_bias_error_vs_interpolation(void)
       //for any of the point, GC and LGS
       reference= poisson(16.0*16.0*flux_i*reference)+RON*random(dimsof(reference)); //fluxify and noisify reference
       image_sh*= flux_i; //flux for point, GC and LGS
-      if(object == "LGS")image_sh_lgs*= flux_i; //flux for point, GC and LGS
+      if(object == "LGS")image_sh_lgs*= flux_i*10; //flux for point, GC and LGS
       
       if (object=="solar") {
           reference= MakeSolar(8.0, 8.0);

@@ -1,10 +1,10 @@
 //uses Test_Fig2_SubPixel_Fitting_all_2017Jan29.i
 
 require, "yoco.i";
-Data1=fits_read("Fits/Data_performance_subpixel_pointV2_5_5.fits");
-Data2=fits_read("Fits/Data_performance_subpixel_LGSV2_5_5.fits");
-Data3=fits_read("Fits/Data_performance_subpixel_GCV2_5_5.fits");
-Data4=fits_read("Fits/Data_performance_subpixel_solarV2_5_5.fits");
+//Data1=fits_read("Fits/Data_performance_subpixel_pointV2_5_5.fits");
+//Data2=fits_read("Fits/Data_performance_subpixel_LGSV2_5_5.fits");
+//Data3=fits_read("Fits/Data_performance_subpixel_GCV2_5_5.fits");
+//Data4=fits_read("Fits/Data_performance_subpixel_solarV2_5_5.fits");
 
 Data1=fits_read("Fits/Two_step_vs_SNR_point.fits");
 Data2=fits_read("Fits/Two_step_vs_SNR_LGS.fits");

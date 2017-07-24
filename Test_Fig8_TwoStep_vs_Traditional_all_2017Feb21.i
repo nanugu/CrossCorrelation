@@ -68,7 +68,10 @@ func write_two_step_vs_traditional(object)
     if(object=="solar") {
         image_sh*= flux_solar;
         CorrlationMethod=7;
-    }else{
+    }else if (object == "LGS") {
+       image_sh*= flux_i*10; //5e4
+       CorrlationMethod=1;
+    }else {
         image_sh*= flux_i; //5e3
         CorrlationMethod=1;
     }
@@ -87,7 +90,7 @@ func write_two_step_vs_traditional(object)
       RTwoStep2 (,j)= Method1(reference1, image_noise, CorrlationMethod, 1, 5, 5)(1:2); //TCoG
       
       RCoG_1(,j)= CoGApp(image_noise);
-      RCoG_2(,j)= TCoG2(image_noise, 1, 5)(1:2);
+      RCoG_2(,j)= TCoG2(image_noise, 1,5, 5)(1:2);
     }//NR
     
     IN(,i)= [xc, yc, xc, yc];//save input shifts

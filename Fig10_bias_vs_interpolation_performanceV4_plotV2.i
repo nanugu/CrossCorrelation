@@ -69,12 +69,12 @@ plt, "--",  3.1, 0.091, tosys=1, height=12, color="black";
 
 
 
-plt, "  -- LGS+corr. step2",  4.0, 0.14, tosys=1, height=14, color="blue", font="times";
-plt, "  -- CF+corr. step2",  4.0, 0.13, tosys=1, height=14, color="red", font="times";
-plt, "  -- Solar+corr. step2",  4.0, 0.12, tosys=1, height=14, color="green", font="times";
-plt, "  -- Point+corr. step2",  4.0, 0.11, tosys=1, height=14, color="black", font="times";
-plt, "  -- Point+TCoG step2",  4.0, 0.10, tosys=1, height=14, color="magenta", font="times";
-plt, "  -- LGS+TCoG step2",  4.0, 0.09, tosys=1, height=14, color="black", font="times";
+plt, "  -- LGS+corr",  4.0, 0.14, tosys=1, height=14, color="blue", font="times";
+plt, "  -- CF+corr",  4.0, 0.13, tosys=1, height=14, color="red", font="times";
+plt, "  -- Solar+corr",  4.0, 0.12, tosys=1, height=14, color="green", font="times";
+plt, "  -- Point+corr",  4.0, 0.11, tosys=1, height=14, color="black", font="times";
+plt, "  -- Point+TCoG",  4.0, 0.10, tosys=1, height=14, color="magenta", font="times";
+plt, "  -- LGS+TCoG",  4.0, 0.09, tosys=1, height=14, color="black", font="times";
 plt, swrite(format="---- %0.2f/K", a(2)),  3.0, 0.08, tosys=1, height=14, color="cyan", font="times";
 
 

@@ -4,7 +4,7 @@ Data2=fits_read("Fits/Data_Two_step_traditional_LGS.fits");
 Data3=fits_read("Fits/Data_Two_step_traditional_GC.fits");
 Data4=fits_read("Fits/Data_Two_step_traditional_solar.fits");
 
-ytop= 0.25;
+ytop= 0.22;
 ybottom= -ytop;
 xleft= -1;
 xright= -xleft;
@@ -15,7 +15,7 @@ Wid= 1.5;
 
 //define data colours
 fitcode= [2, 3,  5, 6];
-fitname= ["Corr. conventional", "Corr. two-step", "TCoG","TCoG2"];
+fitname= ["Corr. conventional", "Corr. two-step", "TCoG conventional","TCoG two-step"];
 colours= ["blue", "red", "black", "green"];
 symbols= [4, 5,  6, 8];
 
@@ -54,9 +54,16 @@ for (i=1; i<=4; i++) {
 yocoNmPlsys, 1, 1;
 
 dy=-0.03;
-for (f=1; f<=4; f++) {
+for (f=1; f<=2; f++) {
   x= -0.5;
-  y= 0.25+f*dy;
+  y= 0.22+f*dy;
+  plp, y, x, symbol= symbols(f), color= colours(f), size= dS, width= Wid;
+  plt, fitname(f), x+0.1, y-0.01, height= 13, color= colours(f), tosys=1;
+ }
+
+for (f=3; f<=4; f++) {
+  x= -0.5;
+  y= -0.08+f*dy;
   plp, y, x, symbol= symbols(f), color= colours(f), size= dS, width= Wid;
   plt, fitname(f), x+0.1, y-0.01, height= 13, color= colours(f), tosys=1;
  }

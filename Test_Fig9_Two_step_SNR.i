@@ -35,7 +35,7 @@ func write_SNR_data(object)
 
   
   flux_i= 5e3;//total flux in image
-  flux_solar=5e4; //solar flux per image
+  flux_solar=10e4; //solar flux per image
   flux_r= 16*16*flux_i;//total flux in reference = number of subaperture times flux_i
   RON= 1.0;//read out noise
   Interp=5;
@@ -109,7 +109,7 @@ func write_SNR_data(object)
       RQuadraticInterpolationD(,j)= SPcenter(reference, image_noise, CorrAlg, 1, Interp, 3)(1:2)- Nx/2.;
       RPyramid(,j)= SPcenter(reference, image_noise, CorrAlg, 1, Interp, 4)(1:2)- Nx/2.;
       RCoG(,j)= SPcenter(reference, image_noise, CorrAlg, 1, Interp, 5)(1:2)- Nx/2.;
-      ROCoG(,j)=
+      //ROCoG(,j)=
       //subtract Nx/2 to have 0 instead of 8 pix
       
 /*
@@ -117,7 +117,7 @@ func write_SNR_data(object)
       plp, RCoG(,j)(1)-sh, SNR(i);
 */
 
-    }
+        }
 
     IN(,i)= [shx, shx, shx, shx];//save input shifts
     
@@ -171,7 +171,7 @@ func write_SNR_data(object)
 
 objects= ["point", "LGS", "GC", "solar"];
 
-for(i=1;i<=2; i++){
+for(i=4;i<=4; i++){
     tmp=  write_SNR_data( objects(i) );
 }
 

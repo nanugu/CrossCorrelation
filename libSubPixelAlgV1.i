@@ -493,30 +493,3 @@ func SCoG(image)
 }
 
 
-func SCoG(image)
-/* DOCUMENT CoG(image)
-
-   x=sum(x(i)*I(i))/sum(I(i));
-   y=sum(y(i)*I(i))/sum(I(i));
-   
-   returns centriods [x,y]
-
- */
-{
-  //image=image(8-3:8+3, 8-3:8+3);
-    size = dimsof(image)(2);
-    sum_xI=sum_yI=sumI1=sumI2=0.0;
-    
-    for(i=1; i<=size; i++)
-        {
-          //sum(x*I), sum(y*I)
-          sum_xI += sum(image(i,)*i);
-          sum_yI += sum(image(,i)*i);
-          
-            //sum(I)s
-          sumI1 +=sum(image(i,));
-          sumI2 +=sum(image(,i));
-        }
-   
-    return [double(sum_xI/sum(image)), double(sum_yI/sum(image))];
-}
